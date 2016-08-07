@@ -1,0 +1,21 @@
+{
+  "name": "Love",
+  "homepage": "https://github.com/mickey-ichi/Music-Love",
+  "authors": [
+    "Le Manh Hung <lemanhhungb01501@gmail.com>"
+  ],
+  "description": "Love",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bulma": "~0.1.2"
+  }
+}
