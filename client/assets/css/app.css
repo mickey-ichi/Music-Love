@@ -1,0 +1,8 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+}
+
+.profile {
+    border-radius: 50%;
+    margin-right: 8px;
+}

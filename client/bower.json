@@ -19,6 +19,7 @@
     "angular-material": "~1.0.9",
     "angular-component-router": "~0.2.1",
     "angular-sanitize": "~1.5.8",
-    "jquery": "~3.1.0"
+    "jquery": "~3.1.0",
+    "material-design-icons": "~2.2.3"
   }
 }
