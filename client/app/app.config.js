@@ -12,7 +12,7 @@
 
         var loveOptions = {
             '500'                 : '#8BC34A',
-            'contrastDefaultColor': 'black'
+            'contrastDefaultColor': 'light'
         };
         var themeLove   = $mdThemingProvider.extendPalette('light-green', loveOptions);
         $mdThemingProvider.definePalette('dashboardColor', themeLove);

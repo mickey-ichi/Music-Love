@@ -1,6 +1,19 @@
 body {
     font-family: helvetica, arial, sans-serif;
 }
+.fade-in {
+    transition: all linear 0.5s;
+    opacity: 1;
+}
+
+.fade-out {
+    transition: all linear 0.5s;
+    opacity: 0;
+}
+
+.color-white {
+    color: #fff;
+}
 
 .profile {
     border-radius: 50%;
