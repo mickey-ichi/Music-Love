@@ -1,4 +1,4 @@
-<md-toolbar class="md-hue-2">
+<md-toolbar class="md-hue-2" md-scroll-shrink ng-if="true">
     <div class="md-toolbar-tools">
         <h2>
             <span>Em Plus</span>
@@ -14,8 +14,7 @@
         </md-button>
         <md-button aria-label="Search">
             Ngam
-        </md-button>
-
+        </md-button >
         <span flex></span>
         <md-button class="md-icon-button" aria-label="Search">
             <i class="material-icons">search</i>
@@ -24,6 +23,9 @@
             <img width="40" class="profile" height="40" src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13582046_630006380482467_7796971150974390317_o.jpg" alt=""/>
             <span>Le Manh Hung</span>
         </md-button>
+        <md-button class="" layout="row" layout-align="center center" aria-label="More">
+            <span>Login</span>
+        </md-button>
         <md-menu md-position-mode="target-right target">
             <md-button class="md-icon-button" ng-click="$mdOpenMenu()">
                 <i class="material-icons">arrow_drop_down</i>
@@ -31,14 +33,14 @@
             <md-menu-content width="3">
                 <md-menu-item>
                     <md-button layout="row" layout-align="start center">
-                        <i md-colors="{color: grey}" class="material-icons">help</i>
+                        <i class="material-icons">help</i>
                         <span>Trợ giúp</span>
                     </md-button>
                 </md-menu-item>
                 <md-menu-item>
                     <md-button layout="row" layout-align="start center">
                         <i class="material-icons">report</i>
-                        Báo Cáo Sự Cố
+                        <span>Báo Cáo Sự Cố</span>
                     </md-button>
                 </md-menu-item>
             </md-menu-content>
