@@ -63,8 +63,7 @@
         </md-toolbar>
     </div>
     <section layout="row" flex="">
-        <md-sidenav class="md-sidenav-left" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="listCategory"
-                    md-whiteframe="1">
+        <md-sidenav class="md-sidenav-left side-navbar md-background-gray" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="listCategory">
             <div class="column">
                 <md-list flex class="list-menu no-padding">
                     <md-list-item class="md-1-line" ng-click="null">
@@ -82,51 +81,44 @@
                 </md-list>
             </div>
         </md-sidenav>
-        <md-content flex="" layout-padding="" class="container">
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
-                <p>IHIHI</p>
+        <md-content flex="" class="container md-background-gray">
+            <div layout="row">
+                <div flex="70" flex-xs="100" layout-padding="">
+                    <div class="feeling md-background-white">
+                        <div layout="column">
+                            <div class="padding-bottom color-green" layout="row" layout-align="left center">
+                                <i class="material-icons">camera_alt</i>
+                                <span class="padding-left">Ảnh</span>
+                            </div>
+                            <md-divider></md-divider>
+                        </div>
+                        <div layout="row" layout-align="left start">
+                            <img width="40" height="40" class="padding-top"
+                                 src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13582046_630006380482467_7796971150974390317_o.jpg"
+                                 alt=""/>
+                            <div layout="column" layout-padding="" flex="">
+                                <textarea style="border: none; resize: none; outline: 0" ng-model="appLove.love" autosize type="text" placeholder="Bạn Đang Nghĩ gì"/>
+                            </div>
+                        </div>
+                        <md-divider></md-divider>
+                        <div layout="row" layout-align="end center">
+                            <md-input-container>
+                                <md-select ng-model="skillCheckUpdate.userState" aria-label="false">
+                                    <md-option layout="row" layout-align="center center" ng-repeat="state in [{id:1 ,name: 'Top', value: '1', icon: 'grade'},{id:2 ,name: 'Fun',value: '2', icon: 'sentiment_satisfied'}]" ng-selected="$index === 0" value="{{state.value}}">
+                                        <span>{{state.name}}</span>
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-button class="md-raised md-primary md-hue-2">
+                                Post
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+                <div flex="30" hide-xs="" layout-padding="">
+                    TEST
+                </div>
+            </div>
         </md-content>
     </section>
     <app-footer></app-footer>
