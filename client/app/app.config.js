@@ -11,8 +11,8 @@
             .accentPalette('pink');
 
         var loveOptions = {
-            '500'                 : '#0097A7',
-            'contrastDefaultColor': 'light'
+            '500'                 : '#8BC34A',
+            'contrastDefaultColor': 'black'
         };
         var themeLove   = $mdThemingProvider.extendPalette('light-green', loveOptions);
         $mdThemingProvider.definePalette('dashboardColor', themeLove);
