@@ -1,7 +1,7 @@
 <div layout="column" style="height: calc(100%)" class="md-background-gray" ng-cloak="">
     <div ng-show="!appLove.showSearch">
         <md-toolbar md-scroll-shrink class="md-whiteframe-1dp md-hue-2">
-            <div class="md-toolbar-tools" flex-offset-lg="10" flex="100" flex-lg="80">
+            <div class="md-toolbar-tools" flex-offset-xl="5" flex="100" flex-xl="95">
                 <md-button class="md-icon-button" aria-label="Menu" hide-gt-sm ng-click="appLove.toggleList()">
                     <i class="material-icons">dehaze</i>
                 </md-button>
@@ -62,7 +62,7 @@
             </div>
         </md-toolbar>
     </div>
-    <section layout="row" flex-offset-gt-md="10" flex="">
+    <section layout="row" flex-offset-xl="5" flex-xl="95" flex="100">
         <md-sidenav class="md-sidenav-left side-navbar md-background-gray" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="listCategory">
             <div class="column">
                 <md-sidemenu>
@@ -93,7 +93,7 @@
                 </md-sidemenu>
             </div>
         </md-sidenav>
-        <md-content flex="" class="container md-background-gray">
+        <md-content class="container md-background-gray" flex="">
             <div layout="row">
                 <div class="new-feed" flex-xs="100" layout-padding="">
                     <div class="feeling md-background-white">
@@ -181,8 +181,35 @@
                         </div>
                     </div>
                 </div>
-                <div hide-xs="" hide-sm="" layout-padding="">
-                    TEST
+                <div hide-xs="" hide-sm="" layout="row" layout-align="start start" layout-padding="" layout-wrap="">
+                    <div class="feeling md-background-white" style="max-width: 360px" flex="100">
+                        <div class="padding-bottom color-gray font-w-600">Đang Hot</div>
+                        <md-divider></md-divider>
+                        <div layout="row" layout-wrap="">
+                            <div class="padding-top" flex="49" style="margin-right: 10px;">
+                                <img style="max-width: 100%" class="padding-bottom" src="http://az616578.vo.msecnd.net/files/2016/03/18/635939394083003642-770889348_love%20pic.jpg"
+                                     alt="">
+                                <div layout="column" flex="" class="color-green padding-left">
+                                    <div class="padding-bottom">
+                                        Love To Love Again
+                                    </div>
+                                    <span>Mickey Ichi</span>
+                                    <span class="label-gray">1 giờ · </span>
+                                </div>
+                            </div>
+                            <div class="padding-top" flex="49">
+                                <img style="max-width: 100%" class="padding-bottom" src="http://az616578.vo.msecnd.net/files/2016/03/18/635939394083003642-770889348_love%20pic.jpg"
+                                     alt="">
+                                <div layout="column" flex="" class="color-green padding-left">
+                                    <div class="padding-bottom">
+                                        Love To Love Again
+                                    </div>
+                                    <span>Mickey Ichi</span>
+                                    <span class="label-gray">1 giờ · </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </md-content>

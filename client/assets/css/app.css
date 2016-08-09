@@ -15,6 +15,14 @@ body {
     color: rgb(0,105,92);
 }
 
+.color-gray {
+    color: #90949c;
+}
+
+.font-w-600 {
+    font-weight: 600;
+}
+
 .color-white {
     color: #fff;
 }
