@@ -1,0 +1,179 @@
+<div layout="column" style="height: calc(100%)" class="md-background-gray" ng-cloak="">
+    <div ng-show="!appLove.showSearch">
+        <md-toolbar md-scroll-shrink class="md-whiteframe-1dp md-hue-2">
+            <div class="md-toolbar-tools" flex-offset-gt-md="10" flex="80">
+                <md-button class="md-icon-button" aria-label="Menu" hide-gt-sm ng-click="appLove.toggleList()">
+                    <i class="material-icons">dehaze</i>
+                </md-button>
+                <div>
+                    Em Plus
+                </div>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="Search" ng-click="appLove.showSearch = !appLove.showSearch">
+                    <i class="material-icons">search</i>
+                </md-button>
+                <md-button hide-xs layout="row" layout-align="center center" aria-label="More">
+                    <img width="40" class="profile" height="40"
+                         src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13582046_630006380482467_7796971150974390317_o.jpg"
+                         alt=""/>
+                    <span>Le Manh Hung</span>
+                </md-button>
+                <md-button hide-xs layout="row" layout-align="center center" aria-label="More">
+                    <span>Đăng Nhập</span>
+                </md-button>
+                <md-button hide-xs layout="row" layout-align="center center" aria-label="More">
+                    <span>Đăng ký</span>
+                </md-button>
+                <md-menu hide-xs md-position-mode="target-right target">
+                    <md-button class="md-icon-button" ng-click="$mdOpenMenu()">
+                        <i class="material-icons">arrow_drop_down</i>
+                    </md-button>
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button layout="row" layout-align="start center">
+                                <i class="material-icons">help</i>
+                                <span>Trợ giúp</span>
+                            </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button layout="row" layout-align="start center">
+                                <i class="material-icons">report</i>
+                                <span>Báo Cáo Sự Cố</span>
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </md-toolbar>
+    </div>
+    <div ng-show="appLove.showSearch" >
+        <md-toolbar class="md-whiteframe-1dp md-hue-2" ng-class="appLove.showSearch? 'fade-in': 'fade-out'">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="back" ng-click="appLove.showSearch = !appLove.showSearch">
+                    <i class="material-icons">arrow_back</i>
+                </md-button>
+                <md-input-container flex="" layout="row" layout-align="start center">
+                    <label>&nbsp;</label>
+                    <input style="color: #fff" placeholder="Enter search">
+                </md-input-container>
+                <md-button aria-label="Search" class="md-icon-button" ng-click="appLove.showSearch = !appLove.showSearch">
+                    <i class="material-icons">search</i>
+                </md-button>
+            </div>
+        </md-toolbar>
+    </div>
+    <section layout="row" flex-offset-gt-md="10" flex="">
+        <md-sidenav class="md-sidenav-left side-navbar md-background-gray" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="listCategory">
+            <div class="column">
+                <md-list flex class="list-menu no-padding">
+                    <md-list-item class="md-1-line" ng-click="null">
+                        <div class="md-list-item-text" layout="row" flex="" layout-align="left center">
+                            <i class="material-icons">grade</i>
+                            <span class="category-icon">Top</span>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-1-line" ng-click="null">
+                        <div class="md-list-item-text" layout="row" flex="" layout-align="left center">
+                            <i class="material-icons">sentiment_satisfied</i>
+                            <span class="category-icon">Fun</span>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </md-sidenav>
+        <md-content flex="" class="container md-background-gray">
+            <div layout="row">
+                <div class="new-feed" flex-xs="100" layout-padding="">
+                    <div class="feeling md-background-white">
+                        <div layout="column">
+                            <div class="padding-bottom color-green" layout="row" layout-align="left center">
+                                <i class="material-icons">camera_alt</i>
+                                <span class="padding-left">Ảnh</span>
+                            </div>
+                            <md-divider></md-divider>
+                        </div>
+                        <div layout="row" layout-align="left start">
+                            <img width="40" height="40" class="padding-top"
+                                 src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13582046_630006380482467_7796971150974390317_o.jpg"
+                                 alt=""/>
+                            <div layout="column" layout-padding="" flex="">
+                                <textarea style="border: none; resize: none; outline: 0" ng-model="appLove.love" autosize type="text" placeholder="Bạn Đang Nghĩ gì"/>
+                            </div>
+                        </div>
+                        <md-divider></md-divider>
+                        <div layout="row" layout-align="end center">
+                            <md-input-container>
+                                <md-select ng-model="skillCheckUpdate.userState" aria-label="false">
+                                    <md-option layout="row" layout-align="center center" ng-repeat="state in [{id:1 ,name: 'Top', value: '1', icon: 'grade'},{id:2 ,name: 'Fun',value: '2', icon: 'sentiment_satisfied'}]" ng-selected="$index === 0" value="{{state.value}}">
+                                        <span>{{state.name}}</span>
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-button class="md-raised md-primary md-hue-2">
+                                Post
+                            </md-button>
+                        </div>
+                    </div>
+                    <div class="feeling md-background-white">
+                        <div layout="row" layout-align="left start">
+                            <img width="40" height="40"
+                                 src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13582046_630006380482467_7796971150974390317_o.jpg"
+                                 alt=""/>
+                            <div layout="column" flex="" class="color-green padding-left">
+                                <span>Mickey Ichi</span>
+                                <span class="label-gray">1 giờ · </span>
+                            </div>
+                        </div>
+                        <p>
+                            Miss the action of the Imagine Cup World Championship? Now you can watch John Boyega judge the final 3 teams of the global competition
+                        </p>
+                        <div>
+                            <img style="max-width: 100%" src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13575894_1225640054113373_762006967057267839_o.jpg"
+                                 alt="">
+                        </div>
+                    </div>
+                    <div class="feeling md-background-white">
+                        <div layout="row" layout-align="left start">
+                            <img width="40" height="40"
+                                 src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13582046_630006380482467_7796971150974390317_o.jpg"
+                                 alt=""/>
+                            <div layout="column" flex="" class="color-green padding-left">
+                                <span>Mickey Ichi</span>
+                                <span class="label-gray">1 giờ · </span>
+                            </div>
+                        </div>
+                        <p>
+                            Miss the action of the Imagine Cup World Championship? Now you can watch John Boyega judge the final 3 teams of the global competition
+                        </p>
+                        <div>
+                            <img style="max-width: 100%" src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13575894_1225640054113373_762006967057267839_o.jpg"
+                                 alt="">
+                        </div>
+                    </div>
+                    <div class="feeling md-background-white">
+                        <div layout="row" layout-align="left start">
+                            <img width="40" height="40"
+                                 src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13582046_630006380482467_7796971150974390317_o.jpg"
+                                 alt=""/>
+                            <div layout="column" flex="" class="color-green padding-left">
+                                <span>Mickey Ichi</span>
+                                <span class="label-gray">1 giờ · </span>
+                            </div>
+                        </div>
+                        <p>
+                            Miss the action of the Imagine Cup World Championship? Now you can watch John Boyega judge the final 3 teams of the global competition
+                        </p>
+                        <div>
+                            <img style="max-width: 100%" src="https://scontent-hkg3-1.xx.fbcdn.net/t31.0-8/13575894_1225640054113373_762006967057267839_o.jpg"
+                                 alt="">
+                        </div>
+                    </div>
+                </div>
+                <div hide-xs="" hide-sm="" layout-padding="">
+                    TEST
+                </div>
+            </div>
+        </md-content>
+    </section>
+    <app-footer></app-footer>
+</div>
