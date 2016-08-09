@@ -33,7 +33,14 @@ body {
     border: 1px solid;
     border-color: #e5e6e9 #dfe0e4 #d0d1d5;
     border-radius: 3px;
+    margin-bottom: 16px;
 }
+
+.label-gray {
+    color: #90949c;
+    font-size: 13px;
+}
+
 .padding-bottom {
     padding-bottom: 8px;
 }
@@ -65,9 +72,15 @@ body {
 .side-navbar {
     margin-top: 2px;
 }
+.new-feed {
+    width: 600px;
+}
 
 @media (max-width: 959px) {
     .side-navbar {
         margin-top: 0;
+    }
+    .new-feed {
+        width: 100%;
     }
 }
