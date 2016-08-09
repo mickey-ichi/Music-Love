@@ -1,7 +1,7 @@
 <div layout="column" style="height: calc(100%)" class="md-background-gray" ng-cloak="">
     <div ng-show="!appLove.showSearch">
         <md-toolbar md-scroll-shrink class="md-whiteframe-1dp md-hue-2">
-            <div class="md-toolbar-tools" flex-offset-gt-md="10" flex="80">
+            <div class="md-toolbar-tools" flex-offset-lg="10" flex="100" flex-lg="80">
                 <md-button class="md-icon-button" aria-label="Menu" hide-gt-sm ng-click="appLove.toggleList()">
                     <i class="material-icons">dehaze</i>
                 </md-button>
@@ -29,16 +29,16 @@
                         <i class="material-icons">arrow_drop_down</i>
                     </md-button>
                     <md-menu-content width="3">
-                        <md-menu-item>
+                        <md-menu-item layout="column">
                             <md-button layout="row" layout-align="start center">
-                                <i class="material-icons">help</i>
-                                <span>Trợ giúp</span>
+                                <i class="material-icons" style="margin-top: 6px; position: absolute">help</i>
+                                <span style="margin-left: 32px;">Trợ giúp</span>
                             </md-button>
                         </md-menu-item>
                         <md-menu-item>
                             <md-button layout="row" layout-align="start center">
-                                <i class="material-icons">report</i>
-                                <span>Báo Cáo Sự Cố</span>
+                                <i class="material-icons"  style="margin-top: 6px; position: absolute">report</i>
+                                <span style="margin-left: 32px;">Báo Cáo Sự Cố</span>
                             </md-button>
                         </md-menu-item>
                     </md-menu-content>
@@ -67,9 +67,9 @@
             <div class="column">
                 <md-sidemenu>
                     <md-sidemenu-group>
-                        <md-subheader class="md-no-sticky">Caption</md-subheader>
+                        <md-subheader class="md-no-sticky">Tình Yêu</md-subheader>
 
-                        <md-sidemenu-content md-icon="home" md-heading="Menu 1" md-arrow="true">
+                        <md-sidemenu-content md-icon="home" md-heading="Love" md-arrow="true">
                             <md-sidemenu-button href="#">Submenu 1</md-sidemenu-button>
                             <md-sidemenu-button href="#">Submenu 2</md-sidemenu-button>
                             <md-sidemenu-button href="#">Submenu 3</md-sidemenu-button>
@@ -79,7 +79,7 @@
                     <md-sidemenu-group>
                         <md-divider></md-divider>
 
-                        <md-subheader class="md-no-sticky">Caption</md-subheader>
+                        <md-subheader class="md-no-sticky">Chủ Đề</md-subheader>
 
                         <md-sidemenu-button href="#">
                             <i class="material-icons">grade</i>
