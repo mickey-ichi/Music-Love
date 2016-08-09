@@ -5,7 +5,8 @@
         'ngMaterial',
         'ngComponentRouter',
         'ngAnimate',
-        'ngSanitize'
+        'ngSanitize',
+        'ngMaterialSidemenu'
     ]);
 
 })(angular);

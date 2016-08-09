@@ -65,20 +65,32 @@
     <section layout="row" flex-offset-gt-md="10" flex="">
         <md-sidenav class="md-sidenav-left side-navbar md-background-gray" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="listCategory">
             <div class="column">
-                <md-list flex class="list-menu no-padding">
-                    <md-list-item class="md-1-line" ng-click="null">
-                        <div class="md-list-item-text" layout="row" flex="" layout-align="left center">
+                <md-sidemenu>
+                    <md-sidemenu-group>
+                        <md-subheader class="md-no-sticky">Caption</md-subheader>
+
+                        <md-sidemenu-content md-icon="home" md-heading="Menu 1" md-arrow="true">
+                            <md-sidemenu-button href="#">Submenu 1</md-sidemenu-button>
+                            <md-sidemenu-button href="#">Submenu 2</md-sidemenu-button>
+                            <md-sidemenu-button href="#">Submenu 3</md-sidemenu-button>
+                        </md-sidemenu-content>
+                    </md-sidemenu-group>
+
+                    <md-sidemenu-group>
+                        <md-divider></md-divider>
+
+                        <md-subheader class="md-no-sticky">Caption</md-subheader>
+
+                        <md-sidemenu-button href="#">
                             <i class="material-icons">grade</i>
-                            <span class="category-icon">Top</span>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-1-line" ng-click="null">
-                        <div class="md-list-item-text" layout="row" flex="" layout-align="left center">
+                            <span class="category-icon">TOP</span>
+                        </md-sidemenu-button>
+                        <md-sidemenu-button>
                             <i class="material-icons">sentiment_satisfied</i>
                             <span class="category-icon">Fun</span>
-                        </div>
-                    </md-list-item>
-                </md-list>
+                        </md-sidemenu-button>
+                    </md-sidemenu-group>
+                </md-sidemenu>
             </div>
         </md-sidenav>
         <md-content flex="" class="container md-background-gray">

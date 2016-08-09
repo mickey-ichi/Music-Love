@@ -70,7 +70,8 @@ body {
     height: 100%
 }
 .side-navbar {
-    margin-top: 2px;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 .new-feed {
     width: 600px;
@@ -79,6 +80,7 @@ body {
 @media (max-width: 959px) {
     .side-navbar {
         margin-top: 0;
+        margin-left: 0;
     }
     .new-feed {
         width: 100%;
