@@ -7,8 +7,12 @@
     angular.module('emPlusApp').component('emPlusApp', {
         templateUrl    : 'app/index.html',
         controller     : AppController,
-        controllerAs   : 'appLove'
+        controllerAs   : 'appLove',
+        $routeConfig: [
+            {path: '/news-feed', component: 'newsFeed', name: 'NewsFeed', useAsDefault: true},
+        ]
     });
+
     AppController.$inject = ['$mdSidenav'];
     
     function AppController($mdSidenav) {
