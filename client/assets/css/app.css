@@ -1,9 +1,19 @@
-body {
+html, body {
     font-family: helvetica, arial, sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #E9EBEE;
+    color: #424242;
 }
 .fade-in {
     transition: all linear 0.5s;
     opacity: 1;
+}
+
+.md-toolbar-fixed {
+    position: fixed;
 }
 
 .fade-out {
@@ -75,7 +85,7 @@ body {
 }
 .container {
     overflow: scroll;
-    height: 100%
+    height: calc(100%);
 }
 .side-navbar {
     margin-top: 8px;
