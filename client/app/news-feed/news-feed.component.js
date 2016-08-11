@@ -8,9 +8,9 @@
             templateUrl : 'app/news-feed/news-feed.html'
         });
 
-    NewsFeedController.$inject = [];
+    NewsFeedController.$inject = ['$mdDialog'];
 
-    function NewsFeedController() {
-
+    function NewsFeedController($mdDialog) {
+        var newsFeedController = this;
     }
 })(window.angular);

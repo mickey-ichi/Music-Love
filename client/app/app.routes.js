@@ -13,12 +13,26 @@
         ]
     });
 
-    AppController.$inject = ['$mdSidenav'];
+    AppController.$inject = ['$mdSidenav', '$mdDialog'];
     
-    function AppController($mdSidenav) {
+    function AppController($mdSidenav, $mdDialog) {
         var appLove = this;
         appLove.showSearch = false;
         
+        appLove.showLoginDialog = function (ev) {
+            $mdDialog.show({
+                    controller         : 'LoginDialogController',
+                    controllerAs       : 'loginDialog',
+                    templateUrl        : 'app/auth/login-dialog.html',
+                    parent             : angular.element(document.body),
+                    targetEvent        : ev,
+                    clickOutsideToClose: true
+                })
+                .then(function (answer) {
+                }, function () {
+                });
+        };
+
         appLove.toggleList = function () {
             $mdSidenav('listCategory').toggle();
         }

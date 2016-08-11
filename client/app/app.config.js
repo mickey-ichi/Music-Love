@@ -7,7 +7,9 @@
 
     function ConfigTheme($mdThemingProvider) {
         $mdThemingProvider.theme('default')
-            .primaryPalette('teal')
+            .primaryPalette('teal', {
+                'default': '800'
+            })
             .accentPalette('pink');
 
         var loveOptions = {

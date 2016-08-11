@@ -1,6 +1,6 @@
 <div layout="column" style="height: calc(100%)" class="md-background-gray" ng-cloak="">
     <div ng-show="!appLove.showSearch">
-        <md-toolbar md-scroll-shrink class="md-whiteframe-1dp md-hue-2">
+        <md-toolbar md-scroll-shrink class="md-whiteframe-1dp">
             <div class="md-toolbar-tools" flex-offset-xl="5" flex="100" flex-xl="95">
                 <md-button class="md-icon-button" aria-label="Menu" hide-gt-sm ng-click="appLove.toggleList()">
                     <i class="material-icons">dehaze</i>
@@ -18,7 +18,7 @@
                          alt=""/>
                     <span>Le Manh Hung</span>
                 </md-button>
-                <md-button hide-xs layout="row" layout-align="center center" aria-label="More">
+                <md-button hide-xs layout="row" layout-align="center center" aria-label="More" ng-click="appLove.showLoginDialog($event)">
                     <span>Đăng Nhập</span>
                 </md-button>
                 <md-button hide-xs layout="row" layout-align="center center" aria-label="More">

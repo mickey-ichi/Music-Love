@@ -3,9 +3,18 @@
 
     angular.module('emPlusApp').controller('LoginDialogController', LoginDialogController);
 
-    LoginDialogController.$inject = [];
+    LoginDialogController.$inject = ['$mdDialog'];
 
-    function LoginDialogController() {
+    function LoginDialogController($mdDialog) {
+        var loginDialog = this;
+
+        loginDialog.hide = function() {
+            $mdDialog.hide();
+        };
+
+        loginDialog.cancel = function() {
+            $mdDialog.cancel();
+        };
 
     }
 
