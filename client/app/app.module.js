@@ -2,11 +2,8 @@
     'use strict';
 
     angular.module('emPlusApp', [
-        'ngMaterial',
         'ngComponentRouter',
-        'ngAnimate',
-        'ngSanitize',
-        'ngMaterialSidemenu'
+        'ngSanitize'
     ]);
 
 })(angular);

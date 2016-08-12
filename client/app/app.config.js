@@ -1,25 +1,11 @@
 (function (angular) {
     'use strict';
 
-    angular.module('emPlusApp').config(ConfigTheme);
+    angular.module('emPlusApp').config(Config);
 
-    ConfigTheme.$inject = ['$mdThemingProvider'];
+    Config.$inject = [];
 
-    function ConfigTheme($mdThemingProvider) {
-        $mdThemingProvider.theme('default')
-            .primaryPalette('teal', {
-                'default': '800'
-            })
-            .accentPalette('pink');
-
-        var loveOptions = {
-            '500'                 : '#8BC34A',
-            'contrastDefaultColor': 'light'
-        };
-        var themeLove   = $mdThemingProvider.extendPalette('light-green', loveOptions);
-        $mdThemingProvider.definePalette('dashboardColor', themeLove);
-        $mdThemingProvider.theme('themeLove').primaryPalette('dashboardColor');
-
+    function Config() {
     }
 
 })(angular);
