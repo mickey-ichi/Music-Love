@@ -120,3 +120,35 @@ fieldset[disabled] .btn-teal.active {
     color: #fff;
 }
 
+.color-gray {
+    color: #90949C;
+}
+
+.padding-bottom {
+    padding-bottom: 15px;
+}
+.padding-top {
+    padding-top: 15px;
+}
+
+.list-group-love {
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 15px;
+}
+.list-group-love > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.list-group-love > ul > li {
+    border-bottom: 1px solid #e9ebee;
+}
+
+.list-group-love > ul > li:last-child {
+    border-bottom: 0;
+}
+
+
