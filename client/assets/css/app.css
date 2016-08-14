@@ -151,6 +151,28 @@ fieldset[disabled] .btn-default-love.active {
     background-color: #f6f7f9;
     color: #00695C;
 }
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: #00695C;
+    outline: 0 none;
+}
+
+
 .color-gray {
     color: #90949C;
 }
