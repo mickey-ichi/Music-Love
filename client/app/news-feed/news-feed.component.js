@@ -27,6 +27,8 @@
             }
         ];
         newsFeed.category = newsFeed.categories[0];
-
+        newsFeed.chooseCategory = function (category) {
+            newsFeed.category = category;
+        }
     }
 })(window.angular);

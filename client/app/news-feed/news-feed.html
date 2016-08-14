@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-8 col-sm-8">
+    <div class="col-md-6 col-lg-6 col-sm-8">
         <div class="content-wrapper">
             <a href="#" class="btn btn-default-love" style="margin-left: 5px;">
                 <span class="glyphicon glyphicon-camera"></span>
@@ -45,17 +45,12 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li ng-repeat="category in newsFeed.categories">
+                            <li ng-repeat="category in newsFeed.categories" ng-click="newsFeed.chooseCategory(category)">
                                 <a href="#">{{category.name}}</a>
                             </li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
                         </ul>
                     </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-teal">POST</button>
-                    </div>
+                    <button type="button" class="btn btn-teal">POST</button>
                 </div>
             </div>
         </div>
@@ -88,6 +83,9 @@
                             <div>
                                 <span class="text-muted">15:30</span>
                             </div>
+                        </div>
+                        <div>
+                            <img src="http://images.freeimages.com/images/previews/793/love-in-the-sunset-1337854.jpg" alt="">
                         </div>
                     </div>
                 </div>
