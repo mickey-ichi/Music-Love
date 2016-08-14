@@ -11,6 +11,22 @@
     NewsFeedController.$inject = [];
 
     function NewsFeedController() {
-        var newsFeedController = this;
+        var newsFeed = this;
+        newsFeed.categories = [
+            {
+                name: 'Top',
+                value: 1
+            },
+            {
+                name: 'FUN',
+                value: 2
+            },
+            {
+                name: 'Love',
+                value: 3
+            }
+        ];
+        newsFeed.category = newsFeed.categories[0];
+
     }
 })(window.angular);

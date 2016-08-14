@@ -161,6 +161,11 @@ fieldset[disabled] .btn-default-love.active {
 .padding-top {
     padding-top: 15px;
 }
+
+.padding-right {
+    padding-right: 15px;
+}
+
 .panel-default .border-bottom {
     margin: 0 15px;
     border-bottom: 1px solid #E9EBEE;
@@ -176,8 +181,11 @@ fieldset[disabled] .btn-default-love.active {
 .feed-text {
     border: none;
     resize: none;
-    width: 100%;
     outline: 0;
+    margin-top: 8px;
+}
+.feed-wrapper {
+    margin-top: 10px;
 }
 
 .content {
@@ -192,4 +200,7 @@ fieldset[disabled] .btn-default-love.active {
 .border-title {
     padding-top: 8px;
     border-bottom: 1px solid #E9EBEE;
+}
+.margin-top {
+    margin-top: 15px;
 }

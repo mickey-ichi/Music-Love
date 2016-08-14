@@ -24,13 +24,75 @@
                 <span class="glyphicon glyphicon-camera"></span>
                 Image/video
             </a>
-            <div class="border-title"></div>
+            <div class="divider"></div>
+            <div class="border-title" style="margin: 0 15px;"></div>
             <div class="content">
-                <img style="float: left; display: inline" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p80x80/13533180_626822077467564_8780992607693131191_n.jpg?oh=f580113bb654c856294479f31e3cd57a&oe=584F53AD&__gda__=1477542859_b5817e639ca4f9a6115fe8baa608eb45"
-                     alt="">
-                <textarea style="display: inline" ng-model="test" autosize class="color-gray feed-text" value="Bạn nghĩ thế nào?"/>
-                <div class="clearfix"></div>
+                <div class="flex-row feed-wrapper">
+                    <img width="40" height="40"
+                         src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p80x80/13533180_626822077467564_8780992607693131191_n.jpg?oh=f580113bb654c856294479f31e3cd57a&oe=584F53AD&__gda__=1477542859_b5817e639ca4f9a6115fe8baa608eb45"
+                         alt="">
+                    <textarea ng-model="test" autosize class="col color-gray feed-text"
+                              placeholder="Bạn nghĩ thế nào?"/>
+                </div>
+                <div class="border-title"></div>
             </div>
+            <div class="padding-top text-right">
+                <div class="padding-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            {{newsFeed.category.name}}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="category in newsFeed.categories">
+                                <a href="#">{{category.name}}</a>
+                            </li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-teal">POST</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper margin-top">
+            <div class="col-sm-12">
+                <div class="animated-background facebook">
+                    <div class="background-masker header-top"></div>
+                    <div class="background-masker header-left"></div>
+                    <div class="background-masker header-right"></div>
+                    <div class="background-masker header-bottom"></div>
+                    <div class="background-masker subheader-left"></div>
+                    <div class="background-masker subheader-right"></div>
+                    <div class="background-masker subheader-bottom"></div>
+                    <div class="background-masker content-top"></div>
+                    <div class="background-masker content-first-end"></div>
+                    <div class="background-masker content-second-line"></div>
+                    <div class="background-masker content-second-end"></div>
+                    <div class="background-masker content-third-line"></div>
+                    <div class="background-masker content-third-end"></div>
+                </div>
+                <div>
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <a href="#">
+                                <img width="40" height="40" class="media-object" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p80x80/13533180_626822077467564_8780992607693131191_n.jpg?oh=f580113bb654c856294479f31e3cd57a&oe=584F53AD&__gda__=1477542859_b5817e639ca4f9a6115fe8baa608eb45" alt="">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <label class="media-heading color-teal">Le Manh Hung</label>
+                            <div>
+                                <span class="text-muted">15:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
     <div class="clearfix"></div>
