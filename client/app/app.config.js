@@ -3,9 +3,9 @@
 
     angular.module('emPlusApp').config(Config);
 
-    Config.$inject = [];
+    Config.$inject = ['$locationProvider'];
 
-    function Config() {
+    function Config($locationProvider) {
+        $locationProvider.html5Mode(true);
     }
-
 })(angular);

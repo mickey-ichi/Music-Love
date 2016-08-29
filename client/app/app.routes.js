@@ -10,6 +10,7 @@
         controllerAs   : 'appLove',
         $routeConfig: [
             {path: '/news-feed', component: 'newsFeed', name: 'NewsFeed', useAsDefault: true},
+            {path: '/profile', component: 'profile', name: 'Profile'}
         ]
     });
 

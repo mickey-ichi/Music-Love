@@ -44,7 +44,9 @@
 <script src="scripts/ui-scroll-to.js"></script>
 <script src="scripts/ui-toggle-class.js"></script>
 <script src="scripts/app.js"></script>
-
+<script type="text/javascript">
+    angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+</script>
 <!-- app -->
 <script src="app/app.module.js"></script>
 <script src="app/app.routes.js"></script>
@@ -62,5 +64,9 @@
 <!--news-feed-->
 <script src="app/news-feed/news-feed.component.js"></script>
 <!--end news-feed-->
+
+<!--profile-->
+<script src="app/profile/profile.component.js"></script>
+<!--end profile-->
 </body>
 </html>
