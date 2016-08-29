@@ -1,1 +1,565 @@
-<ng-outlet></ng-outlet>
+<div class="app" id="app">
+    <div class="app-content box-shadow-z0" role="main">
+        <div class="app-header navbar-md white box-shadow">
+            <div class="navbar">
+                <a data-toggle="collapse" data-target="#navbar-4" class="navbar-item pull-right hidden-md-up m-a-0 m-l">
+                    <i class="material-icons"></i>
+                </a>
+                <!-- brand -->
+                <a class="navbar-brand">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
+                        <path d="M 4 4 L 44 4 L 44 44 Z" fill="#a88add"></path>
+                        <path d="M 4 4 L 34 4 L 24 24 Z" fill="rgba(0,0,0,0.15)"></path>
+                        <path d="M 4 4 L 24 4 L 4  44 Z" fill="#0cc2aa"></path>
+                    </svg>
+                    <img src="../assets/images/logo.png" alt="." class="hide">
+                    <span class="hidden-folded inline">Flatkit</span>
+                </a>
+                <!-- / brand -->
+
+                <!-- nabar right -->
+                <ul class="nav navbar-nav pull-right">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-fullscreen="">
+                            <span><i class="fa fa-fw fa-arrows-v"></i></span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link" data-toggle="dropdown">
+                            <i class="material-icons"></i>
+                            <span class="label up p-a-0 accent"></span>
+                        </a>
+                        <div class="dropdown-menu w-xl text-color pull-right p-a-0 animated flipInX">
+                            <div class="row no-gutter text-primary-hover">
+                                <div class="col-xs-4 b-r b-b">
+                                    <a class="p-a block text-center">
+                                        <i class="material-icons md-24 text-muted m-v-sm"></i>
+                                        <span class="block">Alarm</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4 b-r b-b">
+                                    <a class="p-a block text-center">
+                                        <i class="material-icons md-24 text-muted m-v-sm"></i>
+                                        <span class="block">Favorite</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4 b-b">
+                                    <a class="p-a block text-center">
+                                        <i class="material-icons md-24 text-muted m-v-sm"></i>
+                                        <span class="block">History</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4 b-r">
+                                    <a class="p-a block text-center">
+                                        <i class="material-icons md-24 text-muted m-v-sm"></i>
+                                        <span class="block">Call</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4 b-r">
+                                    <a class="p-a block text-center">
+                                        <i class="material-icons md-24 text-muted m-v-sm"></i>
+                                        <span class="block">Chat</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="p-a block text-center">
+                                        <i class="material-icons md-24 text-muted m-v-sm"></i>
+                                        <span class="block">Inbox</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link" data-toggle="dropdown">
+                            <i class="material-icons"></i>
+                            <span class="label up p-a-0 warn"></span>
+                        </a>
+                        <!-- dropdown -->
+                        <div class="dropdown-menu pull-right w-xl animated fadeInUp no-bg no-border no-shadow">
+                            <div class="scrollable" style="max-height: 220px">
+                                <ul class="list-group list-group-gap m-a-0">
+                                    <li class="list-group-item black lt box-shadow-z0 b">
+          <span class="pull-left m-r">
+            <img src="../assets/images/a0.jpg" alt="..." class="w-40 img-circle">
+          </span>
+          <span class="clear block">
+            Use awesome <a href="" class="text-primary">animate.css</a><br>
+            <small class="text-muted">10 minutes ago</small>
+          </span>
+                                    </li>
+                                    <li class="list-group-item black lt box-shadow-z0 b">
+          <span class="pull-left m-r">
+            <img src="../assets/images/a1.jpg" alt="..." class="w-40 img-circle">
+          </span>
+          <span class="clear block">
+            <a href="" class="text-primary">Joe</a> Added you as friend<br>
+            <small class="text-muted">2 hours ago</small>
+          </span>
+                                    </li>
+                                    <li class="list-group-item dark-white text-color box-shadow-z0 b">
+          <span class="pull-left m-r">
+            <img src="../assets/images/a2.jpg" alt="..." class="w-40 img-circle">
+          </span>
+          <span class="clear block">
+            <a href="" class="text-primary">Danie</a> sent you a message<br>
+            <small class="text-muted">1 day ago</small>
+          </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- / dropdown -->
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle clear" data-toggle="dropdown">
+              <span class="avatar w-32">
+                <img src="../assets/images/a2.jpg" alt="...">
+                <i class="busy b-white right"></i>
+              </span>
+                        </a>
+                        <div class="dropdown-menu pull-right dropdown-menu-scale">
+                            <a class="dropdown-item" ui-sref="app.inbox.list">
+                                <span>Inbox</span>
+                                <span class="label warn m-l-xs">3</span>
+                            </a>
+                            <a class="dropdown-item" ui-sref="app.page.profile">
+                                <span>Profile</span>
+                            </a>
+                            <a class="dropdown-item" ui-sref="app.page.setting">
+                                <span>Settings</span>
+                                <span class="label primary m-l-xs">3/9</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" ui-sref="app.docs">
+                                Need help?
+                            </a>
+                            <a class="dropdown-item" ui-sref="access.signin">Sign out</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- / navbar right -->
+
+                <!-- navbar collapse -->
+                <div class="collapse navbar-toggleable-sm" id="navbar-4" data-pjax="">
+                    <!-- search form -->
+                    <form class="navbar-form form-inline pull-right pull-none-sm navbar-item v-m" role="search">
+                        <div class="form-group l-h m-a-0">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control p-x b-a rounded"
+                                       placeholder="Search projects...">
+      <span class="input-group-btn">
+        <button type="submit" class="btn white b-a rounded no-shadow"><i class="fa fa-search"></i></button>
+      </span>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- / search form -->
+                    <!-- link and dropdown -->
+                    <ul class="nav navbar-nav pull-left nav-active-border b-primary">
+                        <li class="nav-item">
+                            <a href="dashboard.4.html" class="nav-link" ui-sref="app.dashboard" ui-sref-active="active">
+                                <span class="nav-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown pos-stc">
+                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <span class="nav-text">UI</span>
+                            </a>
+                            <div class="dropdown-menu pull-down p-a w-full text-color text-primary-hover">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="_600 text-u-c m-y-sm">UI kits <span class="label label-sm success">10</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <ul class="nav l-h-2x">
+                                                    <li class="hide" ng-class="{'show': 1}">
+                                                        <a ui-sref="app.ui.angularstrap"><span>AngularStrap</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="arrow.html"
+                                                           ui-sref="app.ui.arrow"><span>Arrow</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="box.html" ui-sref="app.ui.box"><span>Box</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="button.html"
+                                                           ui-sref="app.ui.button"><span>Button</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="color.html"
+                                                           ui-sref="app.ui.color"><span>Color</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="dropdown.html"
+                                                           ui-sref="app.ui.dropdown"><span>Dropdown</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="grid.html" ui-sref="app.ui.grid"><span>Grid</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="icon.html" ui-sref="app.ui.icon"><span>Icon</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="label.html"
+                                                           ui-sref="app.ui.label"><span>Label</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="nav l-h-2x">
+                                                    <li>
+                                                        <a href="list.html"
+                                                           ui-sref="app.ui.list"><span>List Group</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="modal.html"
+                                                           ui-sref="app.ui.modal"><span>Modal</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="nav.html" ui-sref="app.ui.nav"><span>Nav</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="progress.html"
+                                                           ui-sref="app.ui.progress"><span>Progress</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="social.html"
+                                                           ui-sref="app.ui.social"><span>Social</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="streamline.html" ui-sref="app.ui.streamline"><span>Streamline</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="timeline.html"
+                                                           ui-sref="app.ui.timeline"><span>Timeline</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="vectormap.html" ui-sref="app.ui.vectormap"><span>Vector Map</span></a>
+                                                    </li>
+                                                    <li class="hide" ng-class="{'show': 1}">
+                                                        <a ui-sref="app.googlemap"><span>Google Map</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="_600 text-u-c m-y-sm">Pages <span class="label label-sm">12</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <ul class="nav l-h-2x">
+                                                    <li>
+                                                        <a href="profile.html" ui-sref="app.page.profile">
+                                                            <span>Profile</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="setting.html" ui-sref="app.page.settings">
+                                                            <span>Settings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="search.html" ui-sref="app.page.search">
+                                                            <span>Search</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="faq.html" ui-sref="app.page.faq">
+                                                            <span>FAQ</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="invoice.html" ui-sref="app.page.invoice">
+                                                            <span>Invoice</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="price.html" ui-sref="app.page.price">
+                                                            <span>Price</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blank.html" ui-sref="app.page.blank">
+                                                            <span>Blank</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="signin.html" ui-sref="access.signin">
+                                                            <span>Sign In</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="signup.html" ui-sref="access.signup">
+                                                            <span>Sign Up</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="nav l-h-2x">
+                                                    <li>
+                                                        <a href="forgot-password.html" ui-sref="access.forgot-password">
+                                                            <span>Forgot Password</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="lockme.html" ui-sref="access.lockme">
+                                                            <span>Lockme Screen</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="404.html" ui-sref="404">
+                                                            <span>Error 404</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="505.html" ui-sref="505">
+                                                            <span>Error 505</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="_600 text-u-c m-y-sm">Form</div>
+                                        <ul class="nav l-h-2x">
+                                            <li>
+                                                <a href="form.layout.html"
+                                                   ui-sref="app.form.layout"><span>Form Layout</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="form.element.html" ui-sref="app.form.element"><span>Form Element</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.form.validation"><span>Form Validation</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.form.select"><span>Select</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.form.editor"><span>Editor</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.form.slider"><span>Slider</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.form.tree"><span>Tree</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.form.file-upload"><span>File Upload</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.form.image-crop"><span>Image Crop</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.form.editable"><span>Editable</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="_600 text-u-c m-y-sm">Table</div>
+                                        <ul class="nav l-h-2x">
+                                            <li>
+                                                <a href="static.html"
+                                                   ui-sref="app.table.static"><span>Static table</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="datatable.html"
+                                                   ui-sref="app.table.datatable"><span>Datatable</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="footable.html"
+                                                   ui-sref="app.table.footable"><span>Footable</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.table.smart"><span>Smart table</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.table.nggrid"><span>NG Grid</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.table.uigrid"><span>UI Grid</span></a>
+                                            </li>
+                                            <li class="hide" ng-class="{'show': 1}">
+                                                <a ui-sref="app.table.editable"><span>Editable</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="widget.html" class="nav-link" ui-sref="app.widget" ui-sref-active="active">
+                                <span class="nav-text">Widget</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="chart.html" class="nav-link" ui-sref="app.chart" ui-sref-active="active">
+                                <span class="nav-text">Chart</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">
+                                <span class="nav-text">Apps</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="inbox.html" class="dropdown-item" ui-sref="app.inbox.list"><span
+                                        class="nav-text">Inbox</span></a>
+                                <a class="dropdown-item hide" ui-sref="app.contact" ng-class="{'show': 1}"><span
+                                        class="nav-text">Contacts</span></a>
+                                <a class="dropdown-item hide" ui-sref="app.calendar" ng-class="{'show': 1}"><span
+                                        class="nav-text">Calendar</span></a>
+                                <a class="dropdown-item hide" ui-sref="app.note.list" ng-class="{'show': 1}"><span
+                                        class="nav-text">Note</span></a>
+                                <a class="dropdown-item hide" ui-sref="app.todo" ng-class="{'show': 1}"><span
+                                        class="nav-text">Todo</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- / link and dropdown -->
+                </div>
+                <!-- / navbar collapse -->
+            </div>
+        </div>
+        <div ui-view class="app-body" id="view">
+            <ng-outlet></ng-outlet>
+        </div>
+        <div class="dark dk pos-rlt">
+            <div class="p-md">
+                <div class="footer p-a p-x-md">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="clearfix">
+                                <!-- brand -->
+                                <a class="navbar-brand">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
+                                        <path d="M 4 4 L 44 4 L 44 44 Z" fill="#a88add"></path>
+                                        <path d="M 4 4 L 34 4 L 24 24 Z" fill="rgba(0,0,0,0.15)"></path>
+                                        <path d="M 4 4 L 24 4 L 4  44 Z" fill="#0cc2aa"></path>
+                                    </svg>
+                                    <img src="../assets/images/logo.png" alt="." class="hide">
+                                    <span class="hidden-folded inline">Flatkit</span>
+                                </a>
+                                <!-- / brand -->
+                            </div>
+                            <div class="m-v-md">
+                                <p class="text-muted">Bootstrap 4 web application ui kit for your next project, with 9
+                                    categories, 6 layouts and 100+ components.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-primary-hover">
+                            <div class="row m-t-md">
+                                <div class="col-sm-4">
+                                    <h6 class="text-u-c m-b">Apps</h6>
+                                    <div class="m-b-md">
+                                        <ul class="nav l-h-2x">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Project</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Inbox</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Calendar</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Contact</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Note</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Todo</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h6 class="text-u-c m-b">Blog</h6>
+                                    <div class="m-b-md">
+                                        <ul class="nav l-h-2x">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Life style</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Fashion</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Travel</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Entertainment</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Local</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h6 class="text-u-c m-b">About</h6>
+                                    <div class="m-b-md">
+                                        <ul class="nav l-h-2x">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Company</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Services</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Contact</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Team</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Support</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="text-u-c m-b m-t-md">Subscribe</h6>
+                            <p>Do not want to miss our newsletter?</p>
+                            <form class="m-b-lg">
+                                <input type="text" class="form-control" placeholder="Your email">
+                                <button type="submit" class="btn btn-primary m-t">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="b b-b m-b m-t-lg"></div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="clearfix">
+                                <a href="" class="btn btn-icon btn-social btn-sm white">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-facebook indigo"></i>
+                                </a>
+                                <a href="" class="btn btn-icon btn-social btn-sm white">
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-twitter blue"></i>
+                                </a>
+                                <a href="" class="btn btn-icon btn-social btn-sm white">
+                                    <i class="fa fa-google-plus"></i>
+                                    <i class="fa fa-google-plus red"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="text-sm-right text-xs-left">
+                                <small class="text-muted">© Copyright 2015. All rights reserved.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
