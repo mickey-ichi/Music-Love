@@ -22,7 +22,11 @@
     "autosize": "~3.0.17",
     "angular": "~1.5.8",
     "bootstrap": "~3.3.7",
-    "font-awesome": "fontawesome#~4.6.3",
-    "core-flex-grid": "https://github.com/splintercode/core-flex-grid.git#~0.2.2"
+    "font-awesome": "~4.6.3",
+    "core-flex-grid": "https://github.com/splintercode/core-flex-grid.git#~0.2.2",
+    "material-design-icons": "~3.0.0",
+    "animate.css": "~3.5.2",
+    "lodash": "~4.15.0",
+    "jquery-storage-api": "jQuery-Storage-API#~1.9.2"
   }
 }
