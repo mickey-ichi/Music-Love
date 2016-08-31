@@ -1,0 +1,15 @@
+.avatar-user-comment {
+    width: 32px;
+    height: 32px;
+    margin-left: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .category .dropdown-menu.pull-right {
+        left: -124px;
+    }
+    .notification .dropdown-menu.pull-right {
+        left: -161px;
+    }
+}
