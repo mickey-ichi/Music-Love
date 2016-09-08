@@ -19,7 +19,8 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/jquery-storage-api/jquery.storageapi.min.js"></script>
 
-<script src="libs/pubnub/pubnub.min.js"></script>
+<!--<script src="bower_components/pubnub/dist/web/pubnub.min.js"></script>-->
+<script src="http://cdn.pubnub.com/pubnub.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/pubnub-angular/dist/pubnub-angular-3.2.1.min.js"></script>
 
@@ -51,6 +52,30 @@
     angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
 </script>
 
-<script src="dist/musiclove.minified.js"></script>
+<!-- build:js dist/musiclove.minified.js -->
+
+<!-- app -->
+<script src="app/app.module.js"></script>
+<script src="app/app.routes.js"></script>
+<script src="app/app.config.js"></script>
+<!-- end app -->
+
+<!--share-->
+<script src="app/share/app-footer.component.js"></script>
+<script src="app/share/autosize/autosize.component.js"></script>
+<!--end share-->
+
+<!--auth-->
+<!--end auth-->
+
+<!--news-feed-->
+<script src="app/news-feed/news-feed.component.js"></script>
+<!--end news-feed-->
+
+<!--profile-->
+<script src="app/profile/profile.component.js"></script>
+<!--end profile-->
+
+<!-- endbuild -->
 </body>
 </html>
