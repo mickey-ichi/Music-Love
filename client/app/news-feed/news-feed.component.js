@@ -3,8 +3,8 @@
 
     angular.module('emPlusApp')
         .component('newsFeed', {
-            controllerAs: 'newsFeed',
             controller  : NewsFeedController,
+            controllerAs: 'newsFeed',
             templateUrl : 'app/news-feed/news-feed.html'
         });
 
@@ -26,6 +26,13 @@
                 value: 3
             }
         ];
+        newsFeed.postNewsFeed = function () {
+            Pubnub.publish({
+                channel: 'hello_world',
+                message : "Hello from PubNub Docs!",
+                triggerEvents: true
+            })
+        };
 
         newsFeed.category = newsFeed.categories[0];
         newsFeed.chooseCategory = function (category) {

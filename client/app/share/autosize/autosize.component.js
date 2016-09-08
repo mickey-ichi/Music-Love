@@ -8,7 +8,6 @@
                 require: "ngModel",
                 link: function ($scope, $element, $attr, ngModel) {
                     ngModel.$render = function() {
-                        console.log($element);
                         $element.val(ngModel.$modelValue);
                         $element.change();
                         autosize($element);
