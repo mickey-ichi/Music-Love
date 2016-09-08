@@ -12,15 +12,12 @@
 
     function ProfileController(Pubnub) {
         var profile = this;
-        profile.subscribe = function () {
-            Pubnub.subscribe({
-                channel: 'hello_world',
-                triggerEvents: ['message', 'connect'],
-                callback: function (message) {
-                    console.log(message);
-                }
-            })
-        }
-
+        Pubnub.subscribe({
+            channel: 'hello_world',
+            triggerEvents: ['message', 'connect'],
+            callback: function (message) {
+                console.log(message);
+            }
+        })
     }
 })(window.angular);
