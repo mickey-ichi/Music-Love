@@ -27,6 +27,12 @@
                 value: 3
             }
         ];
+
+        newsFeed.category = newsFeed.categories[0];
+        newsFeed.chooseCategory = function (category) {
+            newsFeed.category = category;
+        };
+
         newsFeed.postNewsFeed = function () {
             Pubnub.publish({
                 channel: 'hello_world',
@@ -35,10 +41,7 @@
             })
         };
 
-        newsFeed.category = newsFeed.categories[0];
-        newsFeed.chooseCategory = function (category) {
-            newsFeed.category = category;
-        };
+
         Pubnub.subscribe({
             channel: 'hello_world',
             triggerEvents: ['message', 'connect'],
