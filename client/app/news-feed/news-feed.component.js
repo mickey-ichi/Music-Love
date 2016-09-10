@@ -49,7 +49,8 @@
                     replies: []
                 },
                 triggerEvents: true
-            })
+            });
+            newsFeed.message = '';
         };
 
         Pubnub.subscribe({
