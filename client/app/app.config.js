@@ -7,6 +7,7 @@
     function Config($locationProvider) {
         $locationProvider.html5Mode(true);
     }
+
     app.run(InitPubnub);
 
     InitPubnub.$inject = ['Pubnub'];
@@ -16,4 +17,11 @@
             subscribe_key: 'sub-c-23f9e856-742e-11e6-b9ce-02ee2ddab7fe'
         })
     }
+
+    var api_domain = 'http://localhost:3000';
+
+    app.constant('APP_API', {
+        new_feed : api_domain + '/new-feed'
+    });
+
 })(angular.module('emPlusApp'));
