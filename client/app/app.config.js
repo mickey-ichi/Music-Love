@@ -1,6 +1,5 @@
-(function (angular) {
+(function (app) {
     'use strict';
-    var app = angular.module('emPlusApp');
     app.config(Config);
 
     Config.$inject = ['$locationProvider'];
@@ -17,4 +16,4 @@
             subscribe_key: 'sub-c-23f9e856-742e-11e6-b9ce-02ee2ddab7fe'
         })
     }
-})(angular);
+})(angular.module('emPlusApp'));

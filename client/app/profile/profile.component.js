@@ -1,8 +1,6 @@
-;(function (angular) {
+;(function (app) {
     "use strict";
-
-    angular.module('emPlusApp')
-        .component('profile', {
+        app.component('profile', {
             controllerAs: 'profile',
             controller  : ProfileController,
             templateUrl : 'app/profile/profile.html'
@@ -13,4 +11,4 @@
     function ProfileController(Pubnub) {
         var profile = this;
     }
-})(window.angular);
+})(angular.module('emPlusApp'));

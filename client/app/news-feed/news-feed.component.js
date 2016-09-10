@@ -1,16 +1,14 @@
-;(function (angular) {
+;(function (app) {
     "use strict";
-
-    angular.module('emPlusApp')
-        .component('newsFeed', {
+        app.component('newsFeed', {
             controller  : NewsFeedController,
             controllerAs: 'newsFeed',
             templateUrl : 'app/news-feed/news-feed.html'
         });
 
-    NewsFeedController.$inject = ['$rootScope', 'Pubnub'];
+    NewsFeedController.$inject = ['Pubnub', '$scope'];
 
-    function NewsFeedController($rootScope, Pubnub) {
+    function NewsFeedController(Pubnub, $scope) {
         var newsFeed = this;
         newsFeed.message = 'love';
         newsFeed.categories = [
@@ -48,7 +46,8 @@
             callback: function (message) {
                 console.log(message);
                 newsFeed.message = message;
+                $scope.$apply();
             }
         });
     }
-})(window.angular);
+})(angular.module('emPlusApp'));

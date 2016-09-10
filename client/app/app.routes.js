@@ -1,10 +1,9 @@
-(function (angular) {
+(function (app) {
     'use strict';
 
-    angular.module('emPlusApp')
-        .value('$routerRootComponent', 'emPlusApp');
+    app.value('$routerRootComponent', 'emPlusApp');
 
-    angular.module('emPlusApp').component('emPlusApp', {
+    app.component('emPlusApp', {
         templateUrl    : 'app/index.html',
         controller     : AppController,
         controllerAs   : 'appLove',
@@ -19,4 +18,4 @@
     function AppController($mdSidenav, $mdDialog) {
         var appLove = this;
     }
-})(angular);
+})(angular.module('emPlusApp'));
