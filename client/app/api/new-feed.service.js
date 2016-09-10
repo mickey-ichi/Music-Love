@@ -2,9 +2,9 @@
     "use strict";
 
     app.service('newFeedService', NewFeedService);
-    NewFeedService.$inject = ['$http'];
+    NewFeedService.$inject = ['$http', 'APP_API'];
 
-    function NewFeedService ($http) {
+    function NewFeedService ($http, APP_API) {
         var newFeedService = this;
 
         newFeedService.getNewFeed = function () {
@@ -44,7 +44,7 @@
                 },
                 {
                     user: {
-                        avatar: '../assets/images/a0.jpg',
+                        avatar: '../assets/images/a2.jpg',
                         name: 'Moke',
                         id: 4
                     },

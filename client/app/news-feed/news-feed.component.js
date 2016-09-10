@@ -6,9 +6,9 @@
             templateUrl : 'app/news-feed/news-feed.html'
         });
 
-    NewsFeedController.$inject = ['Pubnub', '$scope'];
+    NewsFeedController.$inject = ['Pubnub', '$scope', 'newFeedService'];
 
-    function NewsFeedController(Pubnub, $scope) {
+    function NewsFeedController(Pubnub, $scope, newFeedService) {
         var newsFeed = this;
         newsFeed.message = 'love';
         newsFeed.categories = [
@@ -25,6 +25,8 @@
                 value: 3
             }
         ];
+
+        newsFeed.listNewsFeed = newFeedService.getNewFeed();
 
         newsFeed.category = newsFeed.categories[0];
         newsFeed.chooseCategory = function (category) {

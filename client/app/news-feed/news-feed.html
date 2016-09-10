@@ -55,20 +55,19 @@
                 </div>
                 <div class="box-body">
                     <div class="streamline b-l m-l-md">
-                        <div class="sl-item">
+                        <div class="sl-item" ng-repeat="post in newsFeed.listNewsFeed">
                             <div class="sl-left">
-                                <img src="../assets/images/a0.jpg" class="img-circle">
+                                <img ng-src="{{post.user.avatar}}" class="img-circle">
                             </div>
                             <div class="sl-content">
-                                <div class="sl-date text-muted">2 minutes ago</div>
+                                <div class="sl-date text-muted">{{post.postTimeAt}}</div>
                                 <div class="sl-author">
-                                    <a href>Peter Joo</a>
+                                    <a href>{{post.user.name}}</a>
                                 </div>
                                 <div>
-                                    <p>Consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin
-                                        venenatis ipsum ac feugiat. Vestibulum ullamcorper sodales nisi nec
-                                        condimentum. Mauris convallis mauris at pellentesque volutpat. Phasellus at
-                                        ultricies neque, quis malesuada augue. Donec eleifend</p>
+                                    <p>
+                                        {{post.content}}
+                                    </p>
                                 </div>
                                 <div class="sl-footer">
                                     <a href data-toggle="collapse" data-target="#reply-1">
