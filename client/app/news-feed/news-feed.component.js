@@ -10,7 +10,7 @@
 
     function NewsFeedController(Pubnub, $scope, newFeedService) {
         var newsFeed = this;
-        newsFeed.message = 'love';
+        newsFeed.message = '';
         newsFeed.categories = [
             {
                 name: 'Top',
@@ -25,6 +25,7 @@
                 value: 3
             }
         ];
+        newsFeed.listNewsFeed = [];
 
         newsFeed.listNewsFeed = newFeedService.getNewFeed();
 
@@ -35,19 +36,27 @@
 
         newsFeed.postNewsFeed = function () {
             Pubnub.publish({
-                channel: 'hello_world',
-                message : newsFeed.message,
+                channel: 'news_feed',
+                message : {
+                    user: {
+                        avatar: '../assets/images/a2.jpg',
+                        name: 'Peter Joo',
+                        id: 1
+                    },
+                    content: newsFeed.message,
+                    postTimeAt: 'Now',
+                    postImages: [],
+                    replies: []
+                },
                 triggerEvents: true
             })
         };
 
-
         Pubnub.subscribe({
-            channel: 'hello_world',
+            channel: 'news_feed',
             triggerEvents: ['message', 'connect'],
-            callback: function (message) {
-                console.log(message);
-                newsFeed.message = message;
+            callback: function (post) {
+                newsFeed.listNewsFeed.splice(0, 0, post);
                 $scope.$apply();
             }
         });
