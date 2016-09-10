@@ -55,7 +55,7 @@
                 </div>
                 <div class="box-body">
                     <div class="streamline b-l m-l-md">
-                        <div class="sl-item" ng-repeat="post in newsFeed.listNewsFeed">
+                        <div class="sl-item" ng-repeat="post in newsFeed.listNewsFeed track by $index">
                             <div class="sl-left">
                                 <img ng-src="{{post.user.avatar}}" class="img-circle">
                             </div>
@@ -68,13 +68,18 @@
                                     <p>
                                         {{post.content}}
                                     </p>
+                                    <p>
+                                      <span class="inline p-a-xs b-a dark-white" ng-repeat="postImage in post.postImages">
+                                        <img ng-src="{{postImage}}" class="img-responsive">
+                                      </span>
+                                    </p>
                                 </div>
                                 <div class="sl-footer">
-                                    <a href data-toggle="collapse" data-target="#reply-1">
+                                    <a href data-toggle="collapse" data-target="#reply-{{$index}}">
                                         <i class="fa fa-fw fa-mail-reply text-muted"></i> Trả Lời
                                     </a>
                                 </div>
-                                <div class="box collapse m-a-0 b-a" id="reply-1">
+                                <div class="box collapse m-a-0 b-a" id="reply-{{$index}}">
                                     <div class="media">
                                         <div class="media-left" style="padding-top: 3px; padding-right: 0">
                                             <a href="#">
@@ -91,92 +96,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="media">
+                                <div class="media" ng-repeat="reply in post.replies">
                                     <div class="media-left">
                                         <a href="#">
-                                            <img src="../assets/images/a2.jpg" class="img-circle avatar-user-comment">
+                                            <img ng-src="{{reply.user.avatar}}" class="img-circle avatar-user-comment">
                                         </a>
                                     </div>
                                     <div class="media-body">
-                                        <div class="sl-date text-muted">Sun, 11 Feb</div>
-                                        <p><a href class="text-info">Jessi</a> assign you a task <a href
-                                                                                                    class="text-info">Mockup
-                                            Design</a>.</p>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <a href="#">
-                                            <img src="../assets/images/a5.jpg" class="img-circle avatar-user-comment">
-                                        </a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="sl-date text-muted">Sun, 11 Feb</div>
-                                        <p><a href class="text-info">Jessi</a> assign you a task <a href
-                                                                                                    class="text-info">Mockup
-                                            Design</a>.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sl-item">
-                            <div class="sl-left">
-                                <img src="../assets/images/a2.jpg" class="img-circle">
-                            </div>
-                            <div class="sl-content">
-                                <div class="sl-date text-muted">8:30</div>
-                                <div class="sl-author">
-                                    <a href>Moke</a>
-                                </div>
-                                <div>
-                                    <p>Just followed <a href class="text-info">Jacob</a> and she followed you too.
-                                    </p>
-                                    <p>
-                                      <span class="inline p-a-xs b-a dark-white">
-                                        <img src="../assets/images/b2.jpg" class="img-responsive">
-                                      </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sl-item">
-                            <div class="sl-left">
-                                <img src="../assets/images/a3.jpg" class="img-circle">
-                            </div>
-                            <div class="sl-content">
-                                <div class="sl-date text-muted">Sat, 5 Mar</div>
-                                <div class="sl-author">
-                                    <a href>Moke</a>
-                                </div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat
-                                        a ante soe aiea ose dos soois.</p>
-                                    <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                                </blockquote>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <a href="#">
-                                            <img src="../assets/images/a2.jpg" class="img-circle avatar-user-comment">
-                                        </a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="sl-date text-muted">Sun, 11 Feb</div>
-                                        <p><a href class="text-info">Jessi</a> assign you a task <a href
-                                                                                                    class="text-info">Mockup
-                                            Design</a>.</p>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <a href="#">
-                                            <img src="../assets/images/a5.jpg" class="img-circle avatar-user-comment">
-                                        </a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="sl-date text-muted">Sun, 11 Feb</div>
-                                        <p><a href class="text-info">Jessi</a> assign you a task <a href
-                                                                                                    class="text-info">Mockup
-                                            Design</a>.</p>
+                                        <div class="sl-date text-muted">{{reply.replyTimeAt}}</div>
+                                        <div class="sl-author">
+                                            <a href>{{reply.user.name}}</a>
+                                        </div>
+                                        <p>
+                                            {{reply.content}}
+                                        </p>
+                                        <p>
+                                          <span class="inline p-a-xs b-a dark-white" ng-repeat="repImage in reply.replyImages">
+                                            <img ng-src="{{repImage}}" class="img-responsive">
+                                          </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

@@ -19,7 +19,7 @@
                         id: 1
                     },
                     content: 'Consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper sodales nisi nec condimentum',
-                    postImage: [],
+                    postImages: [],
                     postTimeAt: '2 minutes ago',
                     replies: [
                         {
@@ -29,7 +29,8 @@
                                 id    : 2
                             },
                             content: 'Jessi assign you a task Mockup Design.',
-                            repliesAt: 'Sun, 11 Feb'
+                            replyImages: ['../assets/images/b2.jpg'],
+                            replyTimeAt: 'Sun, 11 Feb'
                         },
                         {
                             user: {
@@ -37,8 +38,9 @@
                                 name  : 'Peter Joo',
                                 id    : 3
                             },
+                            replyImages: [],
                             content: 'Jessi assign you a task Mockup Design.',
-                            repliesTimeAt: 'Sun, 11 Feb'
+                            replyTimeAt: 'Sun, 11 Feb'
                         }
                     ]
                 },
@@ -49,7 +51,7 @@
                         id: 4
                     },
                     content: 'Just followed Jacob and she followed you too.',
-                    postImage: ['../assets/images/b2.jpg'],
+                    postImages: ['../assets/images/b2.jpg'],
                     postTimeAt: '8:30',
                     replies: []
                 }
