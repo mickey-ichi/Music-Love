@@ -1,10 +1,6 @@
 ;(function (app) {
     "use strict";
-        app.component('profile', {
-            controllerAs: 'profile',
-            controller  : ProfileController,
-            templateUrl : 'app/profile/profile.html'
-        });
+        app.controller('ProfileController', ProfileController);
 
     ProfileController.$inject = ['Pubnub'];
 

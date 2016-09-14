@@ -1,21 +1,45 @@
 (function (app) {
     'use strict';
 
-    app.value('$routerRootComponent', 'emPlusApp');
+    app.config(ConfigRouter);
 
-    app.component('emPlusApp', {
-        templateUrl    : 'app/index.html',
-        controller     : AppController,
-        controllerAs   : 'appLove',
-        $routeConfig: [
-            {path: '/news-feed', component: 'newsFeed', name: 'NewsFeed', useAsDefault: true},
-            {path: '/profile', component: 'profile', name: 'Profile'}
-        ]
-    });
+    ConfigRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-    AppController.$inject = [];
-    
-    function AppController($mdSidenav, $mdDialog) {
-        var appLove = this;
+    function ConfigRouter($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise("/not-found");
+
+        $stateProvider
+            .state('app', {
+                url: "",
+                templateUrl: "app/index.html",
+                abstract: true
+            })
+
+            // News Feed
+            .state('app.newsFeed', {
+                url: "/",
+                templateUrl: "app/news-feed/news-feed.html",
+                controller: 'NewsFeedController',
+                controllerAs: 'newsFeed',
+                useAsDefault: true
+            })
+
+            // Profile
+            .state('app.profile', {
+                url: "/profile",
+                templateUrl: "app/profile/profile.html",
+                controller: 'ProfileController',
+                controllerAs: 'profile'
+            })
+
+        ;
+
+        //Not Found
+        $stateProvider.state('app.notFound', {
+            url: "/not-found",
+            templateUrl: "app/not-found/not-found.html"
+
+        });
     }
 })(angular.module('emPlusApp'));

@@ -3,7 +3,7 @@
 
     angular.module('emPlusApp', [
         'pubnub.angular.service',
-        'ngComponentRouter',
+        'ui.router',
         'ngSanitize'
     ]);
 

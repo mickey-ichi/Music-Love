@@ -1,10 +1,6 @@
 ;(function (app) {
     "use strict";
-        app.component('newsFeed', {
-            controller  : NewsFeedController,
-            controllerAs: 'newsFeed',
-            templateUrl : 'app/news-feed/news-feed.html'
-        });
+    app.controller('NewsFeedController', NewsFeedController);
 
     NewsFeedController.$inject = ['Pubnub', '$scope', 'newFeedService'];
 
