@@ -21,8 +21,7 @@
                 url: "/",
                 templateUrl: "app/news-feed/news-feed.html",
                 controller: 'NewsFeedController',
-                controllerAs: 'newsFeed',
-                useAsDefault: true
+                controllerAs: 'newsFeed'
             })
 
             // Profile
