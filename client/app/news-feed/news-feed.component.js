@@ -2,9 +2,9 @@
     "use strict";
     app.controller('NewsFeedController', NewsFeedController);
 
-    NewsFeedController.$inject = ['Pubnub', '$scope', 'newFeedService'];
+    NewsFeedController.$inject = ['$scope', 'newFeedService'];
 
-    function NewsFeedController(Pubnub, $scope, newFeedService) {
+    function NewsFeedController($scope, newFeedService) {
         var newsFeed = this;
         newsFeed.message = '';
         newsFeed.categories = [
@@ -31,31 +31,6 @@
         };
 
         newsFeed.postNewsFeed = function () {
-            Pubnub.publish({
-                channel: 'news_feed',
-                message : {
-                    user: {
-                        avatar: '../assets/images/a2.jpg',
-                        name: 'Peter Joo',
-                        id: 1
-                    },
-                    content: newsFeed.message,
-                    postTimeAt: 'Now',
-                    postImages: [],
-                    replies: []
-                },
-                triggerEvents: true
-            });
-            newsFeed.message = '';
         };
-
-        Pubnub.subscribe({
-            channel: 'news_feed',
-            triggerEvents: ['message', 'connect'],
-            callback: function (post) {
-                newsFeed.listNewsFeed.splice(0, 0, post);
-                $scope.$apply();
-            }
-        });
     }
 })(angular.module('emPlusApp'));

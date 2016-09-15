@@ -1,10 +1,10 @@
 ;(function (app) {
     "use strict";
-        app.controller('ProfileController', ProfileController);
+    app.controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['Pubnub'];
+    ProfileController.$inject = [];
 
-    function ProfileController(Pubnub) {
+    function ProfileController() {
         var profile = this;
     }
 })(angular.module('emPlusApp'));
