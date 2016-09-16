@@ -2,6 +2,7 @@
     "use strict";
 
     app.service('newFeedService', NewFeedService);
+
     NewFeedService.$inject = ['$http', 'APP_API'];
 
     function NewFeedService ($http, APP_API) {
@@ -59,4 +60,4 @@
         };
     }
 
-})(angular.module('emPlusApp'));
+})(angular.module('app'));

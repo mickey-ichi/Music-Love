@@ -1,7 +1,7 @@
 (function (angular) {
     "use strict";
 
-    angular.module('emPlusApp')
+    angular.module('app')
         .directive('autosize', function () {
             return {
                 restrict: "A",

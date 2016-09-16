@@ -33,4 +33,4 @@
         newsFeed.postNewsFeed = function () {
         };
     }
-})(angular.module('emPlusApp'));
+})(angular.module('app'));

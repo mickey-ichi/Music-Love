@@ -14,4 +14,4 @@
         new_feed : api_domain + '/new-feed'
     });
 
-})(angular.module('emPlusApp'));
+})(angular.module('app'));

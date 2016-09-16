@@ -7,4 +7,4 @@
     function ProfileController() {
         var profile = this;
     }
-})(angular.module('emPlusApp'));
+})(angular.module('app'));
