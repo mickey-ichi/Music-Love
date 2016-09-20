@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "fs": "0.0.1-security",
     "gulp": "3.9.1",
-    "gulp-useref": "3.1.0"
+    "gulp-useref": "3.1.0",
+    "gulp-watch": "^4.3.9"
   }
 }

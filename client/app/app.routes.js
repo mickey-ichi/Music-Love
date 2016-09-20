@@ -35,10 +35,10 @@
         ;
 
         //Not Found
-        $stateProvider.state('app.notFound', {
-            url: "/not-found",
-            templateUrl: "app/not-found/not-found.html"
-
-        });
+        $stateProvider
+            .state('app.notFound', {
+                url: "/not-found",
+                templateUrl: "app/not-found/not-found.html"
+            });
     }
-})(angular.module('emPlusApp'));
+})(angular.module('app'));
