@@ -10,5 +10,5 @@ server.listen(PORT, function(){
 });
 
 function handleRequest(request, response){
-    exec("git pull", (e,o,std) => response.end(o));
+    exec("git pull && cd client && bower i", (e,o,std) => response.end(o));
 }
