@@ -18,7 +18,7 @@ var defined = {
 };
 
 gulp.task('dev', ['injectJs', 'mapSass', 'server', 'watchDev']);
-gulp.task('prod', ['injectJs', 'mapSass', 'server']);
+gulp.task('prod', ['injectJs', 'mapSass', 'minJs']);
 
 gulp.task('minJs', minJs);
 gulp.task('minCss', minCss);
