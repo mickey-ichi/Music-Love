@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
     <title>Em Plus</title>
+    <base href="/" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="assets/material-design-icons/material-design-icons.css">
     <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
@@ -44,36 +45,18 @@
 <script src="scripts/ui-scroll-to.js"></script>
 <script src="scripts/ui-toggle-class.js"></script>
 <!--<script src="scripts/app.js"></script>-->
-<script type="text/javascript">
-    angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
-</script>
 
 <!-- build:js dist/musiclove.minified.js -->
 
-<!-- app -->
-<script src="app/app.module.js"></script>
-<script src="app/app.routes.js"></script>
-<script src="app/app.config.js"></script>
-<!-- end app -->
-
-<!--share-->
-<script src="app/share/autosize/autosize.component.js"></script>
-<!--end share-->
-
-<!--app service-->
-<script src="app/api/new-feed.service.js"></script>
-<!--end app service-->
-
-<!--auth-->
-<!--end auth-->
-
-<!--news-feed-->
-<script src="app/news-feed/news-feed.component.js"></script>
-<!--end news-feed-->
-
-<!--profile-->
-<script src="app/profile/profile.component.js"></script>
-<!--end profile-->
+<!-- inject:js -->
+<script src="/app/app.module.js"></script>
+<script src="/app/share/autosize/autosize.component.js"></script>
+<script src="/app/profile/profile.component.js"></script>
+<script src="/app/news-feed/news-feed.component.js"></script>
+<script src="/app/api/new-feed.service.js"></script>
+<script src="/app/app.routes.js"></script>
+<script src="/app/app.config.js"></script>
+<!-- endinject -->
 
 <!-- endbuild -->
 </body>
