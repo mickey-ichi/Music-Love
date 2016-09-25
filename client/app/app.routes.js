@@ -19,17 +19,13 @@
             // News Feed
             .state('app.newsFeed', {
                 url: "/",
-                templateUrl: "app/news-feed/news-feed.html",
-                controller: 'NewsFeedController',
-                controllerAs: 'newsFeed'
+                template: "<news-feed></news-feed>"
             })
 
             // Profile
             .state('app.profile', {
                 url: "/profile",
-                templateUrl: "app/profile/profile.html",
-                controller: 'ProfileController',
-                controllerAs: 'profile'
+                template: "<profile></profile>"
             })
 
         ;

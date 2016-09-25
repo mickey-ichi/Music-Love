@@ -71,4 +71,5 @@ function mapSass() {
 function watchDev() {
     watch(defined.scss, mapSass);
     watch(defined.js, injectJs);
+    watch(defined.js, minJs);
 }

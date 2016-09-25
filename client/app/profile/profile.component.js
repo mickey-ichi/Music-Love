@@ -1,10 +1,14 @@
 ;(function (app) {
     "use strict";
-    app.controller('ProfileController', ProfileController);
+    app.component('profile', {
+        templateUrl: './app/profile/profile.html',
+        controller: Profile,
+        controllerAs: 'profile'
+    });
 
-    ProfileController.$inject = [];
+    Profile.$inject = [];
 
-    function ProfileController() {
+    function Profile() {
         var profile = this;
     }
 })(angular.module('app'));
