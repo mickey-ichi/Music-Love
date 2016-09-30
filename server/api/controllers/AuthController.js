@@ -20,9 +20,10 @@ module.exports = {
      */
     login: function (req, res) {
         var authCustom = new AuthCustom();
-        authCustom.auth();
-        return res.json({
-            todo: 'login() is not implemented yet!'
+        authCustom.auth().then(function (result) {
+            return res.json({
+                todo: result
+            });
         });
     },
 
@@ -41,8 +42,10 @@ module.exports = {
      * `AuthController.facebook()`
      */
     facebook: function (req, res) {
-        return res.json({
-            todo: 'facebook() is not implemented yet!'
+        Auth.create({email: 'dat', password: '123123'}).then(function (result) {
+            return res.json({
+                todo: result
+            });
         });
     },
 

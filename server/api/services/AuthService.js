@@ -3,8 +3,5 @@ module.exports = {
 };
 
 function auth() {
-    console.log('1');
-    Auth.find().then(function (data) {
-        console.log(data);
-    })
+    return Auth.find();
 }
