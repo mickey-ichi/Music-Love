@@ -46,5 +46,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'POST /auth/login': 'AuthController.login'
+  'POST /auth/login': 'AuthController.login',
+  'GET /auth': 'AuthController.facebook'
 };
